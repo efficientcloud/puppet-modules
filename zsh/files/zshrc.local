@@ -4,6 +4,6 @@ export HGMERGE=vimdiff
 # for quagga vtysh
 export VTYSH_PAGER="less -F -X -L"
 
-if [ -e /etc/zshrc.user.$USER ]; then
-	. /etc/zshrc.user.$USER
+if [ -e /etc/zsh/user.rc/$USER ]; then
+	. /etc/zsh/user.rc/$USER
 fi
