@@ -1,3 +1,13 @@
+define emailzshrc($email) {
+	file { "/etc/zsh/user.rc/$name":
+		ensure => "present",
+		mode => 0644,
+		owner => root,
+		group => root,
+		content => "export EMAIL=$email"
+	}
+}
+
 class users {
 
 	group { "staff":
@@ -52,6 +62,10 @@ class users {
 		require => Group["staff"],
 	}
 
+	emailzshrc{ "robe":
+		email => "michael.renner@amd.co.at"
+	}
+
 	ssh_authorized_key { "robe@trottelkunde.amd.co.at":
 		user => "robe",
 		key => "AAAAB3NzaC1yc2EAAAABIwAAAgEA09nolxoJhcGrRn9h2r83pelm3x0Gqgds7lEcqCtQJ+vvCrRisS7D//9gSs+iN/FjBgCgR8JipucXB5Q/qzEgHmHpmQr4fn7CRVhyRzKCxSNm9NPXrTlcL+c4PXb9x5HVd7ukRcz0Tz/IB893g2dXRAQs9bwEYTOvJTWP0ucnu/6ZZw79dvGepn47ayBHSVFglYsjmLpLfQSJK6QTUsD8qdl0WvFmoALQl7CK8Zd+6ScqLN8iHmwFZ4h40FirguG4hqqKFk24YsdnZbCANzUvWDX9pl/wFcsV0TfDCggr5SSF+f+HFFlb6W8YPRrbYtQa2xHh3OBN4ub9FRKUGqEZKFwR+0bl/8xL9lcavXTKTfPlewbu0v2V5WOL+SG1/NOcmE4bO+5nB+G9xwVZIpVy2k2na/3I1PQCbwTwI47/ooGsDgsPc/k/zpUXbVRadpqCQTQFZMS7MfcDHHYEemoh7YfmKbO5glQnWafznWz0wfxTV8E3bpHskTUAd+n9UkrU85KWlCse2lawiP6K2dh42c/tatUjUws5CYBcMahxFKKNMa1NXejqcvNqLQMKhEEwfmVN53oXWWT1pxngM5n0En7cZEu/PGBiUkF9zL1vdRj4P1Z/vEMhft5A4/I0VqBEAtqo17eUTxxiFIb3id78xFiis0vuPeCrF+zKc8JRByc=",
@@ -76,4 +90,7 @@ class users {
 		type => "ssh-rsa",
 		ensure => present,
 	}
+
 }
+
+

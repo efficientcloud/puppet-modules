@@ -13,6 +13,14 @@ class zsh {
 		owner => root,
 		group => root,
 	}
+	file { "/etc/zsh/user.rc":
+		ensure => "directory",
+		mode => 0755,
+		owner => root,
+		group => root,
+		recurse => true,
+		purge => true,
+	}
 	file { "/etc/zsh/zshrc":
 		ensure => "present",
 		mode => 0644,
