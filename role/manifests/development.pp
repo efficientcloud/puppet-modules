@@ -1,11 +1,10 @@
-class role::vnode {
+class role::development {
   include auto::detect
   include puppet::client
   include resolver
   include screen
   include vim
   include zsh
-
-  include openvz::vnode
-  package { "ntp": ensure => installed }
+  include sudo
+  include users
 }

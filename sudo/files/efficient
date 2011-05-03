@@ -1,0 +1,5 @@
+Defaults insults
+Defaults passprompt="[nuclear launch code]: "
+
+%adm ALL=(ALL) NOPASSWD: ALL
+

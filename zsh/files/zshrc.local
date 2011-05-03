@@ -3,4 +3,3 @@ export HGMERGE=vimdiff
 
 # for quagga vtysh
 export VTYSH_PAGER="less -F -X -L"
-

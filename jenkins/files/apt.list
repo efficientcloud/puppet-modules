@@ -1,0 +1,7 @@
+################################################################################
+# This file is managed using puppet.
+# DO NOT EDIT, YOUR CHANGES WILL BE LOST.
+################################################################################
+
+deb http://pkg.jenkins-ci.org/debian binary/
+
