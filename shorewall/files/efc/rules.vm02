@@ -1,0 +1,18 @@
+## -----------------------------------------------------------------
+###   THIS FILE IS MANAGED BY PUPPET, DON'T MAKE ANY LOCAL CHANGES!  
+## -----------------------------------------------------------------
+## For information about entries in this file, type "man shorewall-rules"
+#############################################################################################################
+#ACTION		SOURCE		DEST		PROTO	DEST	SOURCE		ORIGINAL	RATE		USER/	MARK
+#							PORT	PORT(S)		DEST		LIMIT		GROUP
+
+INCLUDE /etc/shorewall/common-rules
+
+# apt-cacher
+ACCEPT		$EFC_SERVER	$FW		tcp	3142
+
+# jenkins
+ACCEPT		$EFC_SERVER	$FW		tcp	9443
+ACCEPT		$EFC_OFFICE	$FW		tcp	9443
+ACCEPT		$GITHUB		$FW		tcp	9443
+

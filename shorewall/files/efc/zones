@@ -1,0 +1,10 @@
+## -----------------------------------------------------------------
+###   THIS FILE IS MANAGED BY PUPPET, DON'T MAKE ANY LOCAL CHANGES!  
+## -----------------------------------------------------------------
+# For information about entries in this file, type "man shorewall-zones"
+###############################################################################
+#ZONE	TYPE	OPTIONS			IN			OUT
+#					OPTIONS			OPTIONS
+fw	firewall
+net	ipv4
+loc	ipv4

@@ -1,0 +1,10 @@
+## -----------------------------------------------------------------
+###   THIS FILE IS MANAGED BY PUPPET, DON'T MAKE ANY LOCAL CHANGES!  
+### -----------------------------------------------------------------
+# For information about entries in this file, type "man shorewall-policy"
+###############################################################################
+#SOURCE		DEST		POLICY		LOG LEVEL	LIMIT:BURST
+
+# THE FOLLOWING POLICY MUST BE LAST
+all		all		REJECT		info
+

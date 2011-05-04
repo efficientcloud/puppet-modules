@@ -1,0 +1,29 @@
+## -----------------------------------------------------------------
+###   THIS FILE IS MANAGED BY PUPPET, DON'T MAKE ANY LOCAL CHANGES!  
+### -----------------------------------------------------------------
+#
+#LAST LINE -- DO NOT REMOVE
+
+# Internet services
+GITHUB="net:207.97.227.224/27"
+BIBLIOTEKA="net:212.232.24.52"
+# ftp.at.debian.org, security.debian.org (x3)
+DEBIAN_MIRRORS="net:213.129.232.18,128.31.0.36,128.101.240.212,149.20.20.6"
+RECURSOR="net:8.8.8.8"
+
+
+EFC_SERVER="net:212.232.27.192/26"
+DEBIAN_LOCAL_REPOSITORY="net:212.232.27.221"
+PUPPET="net:212.232.27.221"
+
+
+# Clients
+EFC_OFFICE="net:62.178.167.178"
+
+MICHAEL_HOME="84.114.195.3"
+LUKAS_HOME="84.114.37.237"
+CHRISTIAN_HOME="213.47.133.111"
+
+TELEWORKER="net:$MICHAEL_HOME,$LUKAS_HOME,$CHRISTIAN_HOME"
+
+

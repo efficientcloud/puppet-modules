@@ -1,0 +1,47 @@
+## -----------------------------------------------------------------
+##   THIS FILE IS MANAGED BY PUPPET, DON'T MAKE ANY LOCAL CHANGES!  
+## -----------------------------------------------------------------
+
+
+# The manpage is also online at 
+# http://shorewall.net/manpages/shorewall-rules.html
+#
+#############################################################################################################
+#ACTION		SOURCE		DEST		PROTO	DEST	SOURCE		ORIGINAL	RATE		USER/	MARK
+#							PORT	PORT(S)		DEST		LIMIT		GROUP
+
+# Accept ICMP in all directions - for great justice!
+ACCEPT	all	all	icmp
+
+# Debian mirrors
+HTTP/ACCEPT     $FW             $DEBIAN_MIRRORS
+HTTP/ACCEPT     $FW             $DEBIAN_LOCAL_REPOSITORY
+
+# SSH management
+SSH/ACCEPT	$EFC_OFFICE	$FW
+SSH/ACCEPT	$TELEWORKER	$FW
+SSH/ACCEPT	$EFC_SERVER	$FW
+SSH/ACCEPT	$FW		loc
+
+# DNS recursing
+DNS/ACCEPT	$FW		$RECURSOR
+
+
+# Github
+SSH/ACCEPT	$FW	$GITHUB
+HTTPS/ACCEPT	$FW	$GITHUB
+
+
+# Backup
+ACCEPT		$BIBLIOTEKA	$FW	tcp	9102
+ACCEPT		$FW	$BIBLIOTEKA	tcp	-	9103
+
+
+# Puppet
+ACCEPT		$FW	$PUPPET	tcp	8140
+
+
+# NTP
+NTP/ACCEPT	$FW	net
+
+
