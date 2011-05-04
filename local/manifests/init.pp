@@ -6,4 +6,8 @@ class local {
 		group => root,
 		content => "Efficient Laboratories\n",
 	}
+
+	package { ["acpid", "psmisc"]:
+		ensure => installed,
+	}
 }
