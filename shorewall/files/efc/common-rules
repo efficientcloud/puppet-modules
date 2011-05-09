@@ -44,4 +44,4 @@ ACCEPT		$FW	$PUPPET		tcp	8140
 # NTP
 NTP/ACCEPT	$FW	net
 
-
+INCLUDE /etc/shorewall/rules.local

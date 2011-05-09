@@ -6,8 +6,6 @@
 #ACTION		SOURCE		DEST		PROTO	DEST	SOURCE		ORIGINAL	RATE		USER/	MARK
 #							PORT	PORT(S)		DEST		LIMIT		GROUP
 
-INCLUDE /etc/shorewall/common-rules
-
 # Puppet
 ACCEPT		$EFC_SERVER	$FW		tcp	8140
 
