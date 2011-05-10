@@ -7,7 +7,7 @@ class local {
 		content => "Efficient Laboratories\n",
 	}
 
-	package { ["acpid", "psmisc"]:
+	package { "psmisc":
 		ensure => installed,
 	}
 }
