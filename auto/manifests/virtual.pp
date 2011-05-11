@@ -10,7 +10,7 @@ class auto::virtual::openvzve {
 }
 
 class auto::virtual::physical {
-	package { "acpid":
+	package { ["acpid", "ntp"]:
 		ensure => installed,
 	}
 }

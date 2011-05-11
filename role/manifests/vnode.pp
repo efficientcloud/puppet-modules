@@ -7,5 +7,4 @@ class role::vnode {
   include zsh
 
   include openvz::vnode
-  package { "ntp": ensure => installed }
 }
