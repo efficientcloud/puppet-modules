@@ -10,13 +10,19 @@
 ACCEPT		$EFC_SERVER	$FW		tcp	3142
 
 # jenkins
-ACCEPT		$EFC_SERVER	$FW		tcp	9443
-ACCEPT		$EFC_OFFICE	$FW		tcp	9443
-ACCEPT		$GITHUB		$FW		tcp	9443
+HTTPS/ACCEPT	$EFC_SERVER	$FW
+HTTPS/ACCEPT	$EFC_OFFICE	$FW
+HTTPS/ACCEPT	$GITHUB		$FW
+
+JabberPlain/ACCEPT	$FW	net
+JabberSecure/ACCEPT	$FW	net
+
+# ipmi for automatic rebooting! (jenkins build)
+ACCEPT		$FW		$EFC_SERVER	udp	623
 
 # repo
-ACCEPT		$EFC_SERVER	$FW		tcp	80
-ACCEPT		$EFC_OFFICE	$FW		tcp	80
+HTTP/ACCEPT		$EFC_SERVER	$FW
+HTTP/ACCEPT		$EFC_OFFICE	$FW
 
 # Der Builder moechte ins Netz!
 HTTP/ACCEPT		$FW		net
