@@ -9,3 +9,4 @@
 # Puppet
 ACCEPT		$EFC_SERVER	$FW		tcp	8140
 
+DHCPfwd/ACCEPT	$EFC_SERVER	$FW
