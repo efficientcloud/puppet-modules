@@ -18,10 +18,13 @@ JabberPlain/ACCEPT	$FW	net
 JabberSecure/ACCEPT	$FW	net
 
 # Autodeploy Build Ping
-ACCEPT		$EFC_SERVER	$FW		tcp	32323
+ACCEPT		$DEMO_SERVER	$FW		tcp	32323
+
+# Automatic testing
+ACCEPT		$FW		$DEMO_SERVER
 
 # ipmi for automatic rebooting! (jenkins build)
-ACCEPT		$FW		$EFC_SERVER	udp	623
+ACCEPT		$FW		$DEMO_SERVER_OOB	udp	623
 
 # repo
 HTTP/ACCEPT		$EFC_SERVER	$FW
