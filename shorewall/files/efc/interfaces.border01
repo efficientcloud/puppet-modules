@@ -1,0 +1,11 @@
+## -----------------------------------------------------------------
+##   THIS FILE IS MANAGED BY PUPPET, DON'T MAKE ANY LOCAL CHANGES!  
+## -----------------------------------------------------------------
+#
+#------------------------------------------------------------------------------
+# For information about entries in this file, type "man shorewall-interfaces"
+###############################################################################
+#ZONE	INTERFACE	BROADCAST	OPTIONS
+net     eth0            detect          tcpflags,nosmurfs,routefilter,logmartians
+loc     eth1            detect          tcpflags,nosmurfs,routefilter,logmartians
+vpn	tun0		detect		tcpflags,nosmurfs,routefilter,logmartians,routeback
