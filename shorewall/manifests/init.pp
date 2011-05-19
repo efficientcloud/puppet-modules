@@ -29,6 +29,7 @@ class shorewall::efc inherits shorewall {
     # might be host-specific
     file { "/etc/shorewall/interfaces": source => ["puppet:///modules/shorewall/efc/interfaces.$hostname", "puppet:///modules/shorewall/efc/interfaces"] }
     file { "/etc/shorewall/zones": source => ["puppet:///modules/shorewall/efc/zones.$hostname", "puppet:///modules/shorewall/efc/zones"] }
+    file { "/etc/shorewall/masq": source => ["puppet:///modules/shorewall/efc/masq.$hostname", "puppet:///modules/shorewall/efc/masq"] }
     file { "/etc/shorewall/rules.local": source => ["puppet:///modules/shorewall/efc/rules.$hostname", "puppet:///modules/shorewall/efc/rules"] }
 
     exec { "/sbin/shorewall restart": 
