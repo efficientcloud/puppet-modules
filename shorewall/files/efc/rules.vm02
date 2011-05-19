@@ -17,6 +17,9 @@ HTTPS/ACCEPT	$GITHUB		$FW
 JabberPlain/ACCEPT	$FW	net
 JabberSecure/ACCEPT	$FW	net
 
+# Autodeploy Build Ping
+ACCEPT		$EFC_SERVER	$FW		tcp	32323
+
 # ipmi for automatic rebooting! (jenkins build)
 ACCEPT		$FW		$EFC_SERVER	udp	623
 

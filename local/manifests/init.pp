@@ -7,6 +7,15 @@ class local {
 		content => "Efficient Laboratories\n",
 	}
 
+
+	file { "/etc/default/bootlogd":
+		ensure => file,
+		mode => 0644,
+		owner => root,
+		group => root,
+		content => "BOOTLOGD_ENABLE=Yes\n",
+	}
+
 	package { "psmisc":
 		ensure => installed,
 	}
