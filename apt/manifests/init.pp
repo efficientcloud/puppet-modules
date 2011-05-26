@@ -25,4 +25,12 @@ class apt::unattendedupgrades {
   package { "unattended-upgrades":
     ensure => installed,
   }
+
+  file { "/etc/apt/apt.conf.d/50unattended-upgrades":
+    source => "puppet:///modules/apt/unattended-upgrades",
+    mode   => 0644,
+    owner  => root,
+    group  => root,
+    ensure => present, 
+  }             
 }
