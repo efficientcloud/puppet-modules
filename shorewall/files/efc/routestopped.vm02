@@ -1,0 +1,8 @@
+## -----------------------------------------------------------------
+###   THIS FILE IS MANAGED BY PUPPET, DON'T MAKE ANY LOCAL CHANGES!  
+## -----------------------------------------------------------------
+# For information about entries in this file, type "man shorewall-routestopped"
+##############################################################################
+#INTERFACE	HOST(S)                  OPTIONS
+prodnet		-
+eth1		-

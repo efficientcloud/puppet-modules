@@ -23,7 +23,6 @@ class shorewall::efc inherits shorewall {
     }
     file { "/etc/shorewall/params": source => "puppet:///modules/shorewall/efc/params" }
     file { "/etc/shorewall/policy": source => "puppet:///modules/shorewall/efc/policy" }
-    file { "/etc/shorewall/routestopped": source => "puppet:///modules/shorewall/efc/routestopped" }
     file { "/etc/shorewall/rules": source => "puppet:///modules/shorewall/efc/common-rules" }
 
     # might be host-specific
@@ -31,6 +30,7 @@ class shorewall::efc inherits shorewall {
     file { "/etc/shorewall/zones": source => ["puppet:///modules/shorewall/efc/zones.$hostname", "puppet:///modules/shorewall/efc/zones"] }
     file { "/etc/shorewall/masq": source => ["puppet:///modules/shorewall/efc/masq.$hostname", "puppet:///modules/shorewall/efc/masq"] }
     file { "/etc/shorewall/rules.local": source => ["puppet:///modules/shorewall/efc/rules.$hostname", "puppet:///modules/shorewall/efc/rules"] }
+    file { "/etc/shorewall/routestopped": source => ["puppet:///modules/shorewall/efc/routestopped.$hostname","puppet:///modules/shorewall/efc/routestopped"] }
 
     exec { "/sbin/shorewall restart": 
 	    refreshonly => true,
