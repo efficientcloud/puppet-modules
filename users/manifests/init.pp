@@ -79,7 +79,7 @@ class users {
 		gid => "staff",
 		groups => ["sudo","adm"],
 		managehome => true,
-		shell => "/bin/bash",
+		shell => "/bin/zsh",
 		uid => "2004",
 		require => Group["staff"],
 	}
