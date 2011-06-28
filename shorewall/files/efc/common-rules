@@ -46,4 +46,7 @@ ACCEPT		$FW	$PUPPET		tcp	8140
 # NTP
 NTP/ACCEPT	$FW	net
 
+# apt-cache
+HTTP/ACCEPT	$FW	net:212.232.27.226 tcp 80
+
 INCLUDE /etc/shorewall/rules.local
