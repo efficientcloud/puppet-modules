@@ -7,3 +7,6 @@ export VTYSH_PAGER="less -F -X -L"
 if [ -e /etc/zsh/user.rc/$USER ]; then
 	. /etc/zsh/user.rc/$USER
 fi
+
+[[ $(hostname) == vm03* ]] && export RAILS_ENV=development
+
