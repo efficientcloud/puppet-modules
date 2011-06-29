@@ -9,7 +9,14 @@ define emailzshrc($email) {
 }
 
 class users {
-
+	user { "root":
+		ensure => "present",
+		gid => "root",
+		managehome => false,
+		shell => "/bin/zsh",
+		uid => "0",
+	}
+	
 	group { "staff":
 		ensure => "present",
 		gid => 50,
