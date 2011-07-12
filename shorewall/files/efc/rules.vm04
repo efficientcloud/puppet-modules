@@ -10,6 +10,7 @@
 ACCEPT		$EFC_OFFICE	$FW
 ACCEPT		$EFC_SERVER	$FW
 
-# DEVDEV
+# srv.io
 ACCEPT		$FW		net
 ACCEPT		ve		net
+ACCEPT		net		$FW		tcp	80
