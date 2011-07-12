@@ -13,3 +13,6 @@ ACCEPT		$EFC_SERVER	$FW
 # DEVDEV
 ACCEPT		$FW		net
 ACCEPT		ve		net
+ACCEPT          ve              $FW
+ACCEPT          $FW             ve
+
