@@ -9,4 +9,5 @@ if [ -e /etc/zsh/user.rc/$USER ]; then
 fi
 
 [[ $(hostname) == vm03* ]] && export RAILS_ENV=development
+[[ $(hostname) == vm03* ]] && export HTTP_PROXY=http://127.0.0.1:3128
 
