@@ -7,6 +7,7 @@
 # Internet services
 GITHUB="net:207.97.227.224/27,173.203.140.192/27"
 BIBLIOTEKA="net:212.232.24.52"
+WORKBENCH="net:86.59.21.21"
 # ftp.at.debian.org, security.debian.org (x3)
 DEBIAN_MIRRORS="net:213.129.232.18,128.31.0.36,128.101.240.212,149.20.20.6"
 RECURSOR="net:8.8.8.8"
