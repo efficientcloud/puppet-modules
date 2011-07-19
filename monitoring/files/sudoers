@@ -1,0 +1,2 @@
+
+%nagios ALL = NOPASSWD: /opt/nagios/check_megaraid_sas
