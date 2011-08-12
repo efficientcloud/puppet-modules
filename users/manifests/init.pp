@@ -70,7 +70,7 @@ class users {
 	}
 
 	emailzshrc{ "robe":
-		email => "michael.renner@amd.co.at"
+		email => "m.renner@efficientcloud.com"
 	}
 
 	ssh_authorized_key { "robe@trottelkunde.amd.co.at":
@@ -93,7 +93,11 @@ class users {
 
 	ssh_authorized_key { "lfittl@capricorn":
 		user => "lfittl",
-		key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAv8vIijmCaJhz65CFld99ddqmwLqjCU0/4FO1fxXg+m6uGMdQC494uFMoC4w5BK6sZdE6OyLabzcQBavUmjEwMcW8P2d+vvzuZhDk92GatoUqTnbPJsObq7ZQtcA12fKY7/66g4JhggYprK3bUQVjDZYe7xJc6BzsFTYpwCqV6F2V035HT1Z/xn85KNVQg0iRduwzn+WmRbExw7IITlsdc/ODF3tw1GrRE0v2vMFLQ2Z++0n8uJcCg6gPsXFEqmYmTtbw4KW/kmTT4W8HfKXJBl68qDfG2csfLoUiJTKbFZwM6CjHM5WJqKYWOSHsAfKV4Cob2egUPmHMHndsID/6Uw==",
+		ensure => absent
+	}
+	ssh_authorized_key { "lfittl@kenkyo":
+		user => "lfittl",
+		key => "AAAAB3NzaC1yc2EAAAABIwAAAQEA2fuZ0yey/pxhXaGK2tGm6Cj3aHJL2IiXIXbyUKCtRUm4FGn6x3FgYrv6TXHyPVGi4KMJ2pSx1F9WyO0C50qX2Bxgd0Pi+38CkWG8a6ERHMUSLaoX4+FLOTAdZGvMu2FgNuR3rKDxQf09nKTVv14ijR1mOQEQ+21lHE9YdcVMh1VdNA/nIjXiI1pp3CIQ024yrFwR3oGsW2JNDYSxv7jH91YxvSrlhLhdxwplhJIEuxeOkKfWa3tPWXAKaahUTC+BymR59e8e6pbcX3mbK6CaiZIrs1v/nUvLE2Z7qrT5aGY7UCl9gNUJo1p9+RVOOvSKiC7Jlj8RTGukftoHGhUjgQ==",
 		type => "ssh-rsa",
 		ensure => present,
 	}
