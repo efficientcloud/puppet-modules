@@ -10,9 +10,12 @@
 ACCEPT		$EFC_OFFICE	$FW
 ACCEPT		$EFC_SERVER	$FW
 
-# srv.io
+# hostingstack.com
 ACCEPT		$FW		net
 ACCEPT		ve		net
-ACCEPT		net		$FW		tcp	80
+HTTP/ACCEPT	net		$FW
+HTTPS/ACCEPT	net		$FW
+DNAT		net		$FW::2200	tcp	22	-		212.232.27.230
+
 # Squid (rubygems)
 ACCEPT		ve		$FW		tcp	3128
